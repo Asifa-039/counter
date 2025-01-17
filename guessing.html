@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Guessing Game</h1>
+    <!-- <div id="user"> -->
+    <div id="human">user input</div>
+    <input type="text" id="humaninput" value="0" />
+    <div id="machine">Machine input</div>
+    <input type="text" id="machineinput" value="0" />
+    <p id="sec">Seconds:</p>
+    Human Score:<div id="scr1">0</div>
+    Machine Score:<div id="scr2">0</div>
+    <!-- </div> -->
+   <script>
+   function show(){
+    var a=document.getElementById("humaninput");
+    var b=document.getElementById("machineinput");
+    var today=new Date();
+    var s=today.getSeconds()%4;
+    document.getElementById("sec").innerText = "Seconds: " + s;
+    
+    if(s==0){
+        var z=Math.floor(Math.random()*5)
+        b.value=z;
+        if(a.value==b.value)
+                    {
+                        var k=document.getElementById('scr1').innerHTML;
+
+                        k=Number(k);
+                        k+=1;
+                        document.getElementById("scr1").innerHTML=k;
+                    }
+                    else
+                    {
+                        var k=document.getElementById('scr2').innerHTML;
+
+                        k=Number(k);
+                        k+=1;
+                        document.getElementById("scr2").innerHTML=k;
+                    }  
+        
+    }
+
+   }
+   setInterval("show()",1000)
+    
+   </script>
+
+</body>
+
+</html>

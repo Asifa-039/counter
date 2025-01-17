@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="inc()">+</button>
+   <input type="text" id="target" value="0"/>
+   <button onclick="dec()">-</button>
+   <script>
+    var input=document.getElementById('target');
+    function inc(){
+        if(input.value==10){
+            alert('dont inc');
+
+        }
+        else{
+            input.value=Number(input.value)+1;
+        }
+       
+    }
+    function dec(){
+        if(input.value==0){
+            alert('dont dec');
+
+        }
+        else{
+            input.value=Number(input.value)-1;
+        }
+    }
+   </script>
+</body>
+</html>
